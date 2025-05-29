@@ -7,15 +7,13 @@ const userRoutes = require('../routes/user');
 const app = express();
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://surs-frontend.vercel.app',
     credentials: true // Разрешение использования куки
     }
     
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
-
-
 
 // Роуты
 app.use('/auth', authRoutes);
